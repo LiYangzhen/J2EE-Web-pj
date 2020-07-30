@@ -24,25 +24,25 @@
     <div class="form_part register">
         <%
             request.setCharacterEncoding("UTF-8");
-            String userName = request.getParameter("userName");
+            String username = request.getParameter("username");
             String firstName = request.getParameter("firstName");
             String lastName = request.getParameter("lastName");
             String email = request.getParameter("email");
             String address = request.getParameter("address");
         %>
-        <form action="./register" method="post">
+        <form action="register" method="post">
             <label>用户名
                 <input class="input_box" name="username" type="text" placeholder="不少于8位不高于16位的数字、字母、下划线"
                        pattern="^[a-zA-Z0-9_-]{4,16}$" required
                     <%
-                    if (userName !=null){
-                        out.print("value='"+request.getParameter("userName")+"'");
+                    if (username !=null){
+                        out.print("value='"+request.getParameter("username")+"'");
                     }
                 %>
                 >
                 <%
-                    if ("".equals(userName)) {
-                        out.print("<p style='color:red;text-align:left;'>You must enter UserName.</p>");
+                    if ("".equals(username)) {
+                        out.print("<p style='color:red;text-align:left;'>You must enter Username.</p>");
                     }
                 %>
             </label>
@@ -98,7 +98,7 @@
                 }
                 %>
             </label>
-            <label>密码<input class="input_box" name="password1" type="password" placeholder="不少于8位不高于16位的数字、字母"
+            <label>密码<input class="input_box" name="password" type="password" placeholder="不少于8位不高于16位的数字、字母"
                             pattern="^[0-9A-Za-z]{8,16}$" id="password1" required onkeyup="validate()">
             </label>
             <label>确认密码<input class="input_box" name="password2" type="password" placeholder="请保持两次输入密码的相同"
@@ -107,7 +107,7 @@
             </label>
 
             <input type="submit" value="注册" id="submit">
-            <p>已有ImgShow账号? <a href="login.jsp"> 立即登录!</a></p>
+            <p>已有ImgShow账号? <a href="login"> 立即登录!</a></p>
         </form>
     </div>
 </main>
@@ -123,7 +123,9 @@
                 </a>
             </li>
         </ul>
-        <p> © 2020-现在 版权所有 备案号19302010059</p>
+        <p> © 2020-现在 版权所有 <a href="http://www.beian.miit.gov.cn">陕ICP备20010010号-1</a>
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=61070202000390">沪公网备案61070202000390号</a>
+        </p>
         <ul class="footer__nav__list">
             <li>
                 <a class="link" href="" onclick="alert('别攻击就行')">使用条款</a>

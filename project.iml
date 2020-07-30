@@ -21,5 +21,11 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="PROVIDED" name="Tomcat 9.0.36" level="application_server_libraries" />
     <orderEntry type="library" name="mysql-connector-java-5.1.24-bin" level="project" />
+    <orderEntry type="library" name="junit-4.10" level="project" />
+    <orderEntry type="library" name="commons-dbutils-1.7" level="project" />
+    <orderEntry type="library" name="c3p0-0.9.5.2" level="project" />
+    <orderEntry type="library" name="mchange-commons-java-0.2.12" level="project" />
+    <orderEntry type="library" name="commons-fileupload-1.3.2" level="project" />
+    <orderEntry type="library" name="commons-io-2.5" level="project" />
   </component>
 </module>

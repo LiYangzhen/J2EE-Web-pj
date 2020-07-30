@@ -11,12 +11,12 @@ import java.sql.Statement;
  * @Time 15:43
  */
 public class JdbcUtil {
-    private final static String URL = "jdbc:mysql://localhost:3306/"; //若没有改动，默认端口3306
+    private final static String URL = "jdbc:mysql://localhost:3306/travels"; //若没有改动，默认端口3306
     private final static String USER = "root"; // 安装mysql时的用户名
-    private final static String PASSWORD = "123456"; //安装mysql时的密码
+    private final static String PASSWORD = "root"; //安装mysql时的密码
     public JdbcUtil() {
         try {
-// 反射
+    // 反射
             Class.forName("com.mysql.jdbc.Driver");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();

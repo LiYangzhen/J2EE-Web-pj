@@ -8,29 +8,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Welcome</title>
 </head>
 <body>
-<%
-    if (request != null) {
-        String username = request.getParameter("username");
-        String firstName = request.getParameter("firstName");
-        String lastName = request.getParameter("lastName");
-        String email = request.getParameter("email");
-        String address = request.getParameter("address");
-        String password = request.getParameter("password1");
-        response.getWriter().println("UserName: " + username);
-        response.getWriter().println("<br>");
-        response.getWriter().println("FirstName: " + firstName);
-        response.getWriter().println("<br>");
-        response.getWriter().println("LastName: " + lastName);
-        response.getWriter().println("<br>");
-        response.getWriter().println("Email: " + email);
-        response.getWriter().println("<br>");
-        response.getWriter().println("Address: " + address);
-        response.getWriter().println("<br>");
-        response.getWriter().println("Password: " + password);
-    }
-%>
+
+<%=request.getAttribute("abc") %>
+
 </body>
 </html>

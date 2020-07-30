@@ -6,6 +6,11 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    request.setCharacterEncoding("UTF-8");
+    String username = request.getParameter("username");
+    String password = request.getParameter("password");
+%>
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
@@ -22,34 +27,44 @@
 <body>
 <main>
     <div class="form_part">
-        <form action="./login" method="post">
+        <form action="login" method="post">
             <input class="input_box" name="username" type="text" placeholder="用户名" pattern="^[a-zA-Z0-9_-]{4,16}$"
                    required
                 <%
 
-                    if (request.getParameter("username") != null){
+                    if (username != null){
                         out.print("value='"+request.getParameter("username")+"'");
                     }
                 %>
             >
+            <%
+                if ("".equals(username)) {
+                    out.print("<p style='color:red;text-align:left;'>You must enter Username.</p>");
+                }
+            %>
             <input class="input_box" name="password" type="password" placeholder="密码" pattern="^[0-9A-Za-z]{8,16}$"
                    required
                 <%
-                    if (request.getParameter("password") != null){
+                    if (password != null){
                         out.print("value='"+request.getParameter("password")+"'");
                     }
                 %>
             >
+            <%
+                if ("".equals(password)) {
+                    out.print("<p style='color:red;text-align:left;'>You must enter Password.</p>");
+                }
+            %>
 
             <%
-                if (request.getParameter("username") != null) {
+                if (username != null) {
                     out.println("<p style='color: red'>您输入的用户名或密码错误</p>");
                 }
             %>
 
             <input type="submit" value="登录">
         </form>
-        <p>创建一个账号? <a href="register.jsp"> 立即注册!</a></p>
+        <p>创建一个账号? <a href="register"> 立即注册!</a></p>
     </div>
 </main>
 
@@ -66,7 +81,9 @@
                 </a>
             </li>
         </ul>
-        <p> © 2020-现在 版权所有 备案号19302010059</p>
+        <p> © 2020-现在 版权所有 <a href="http://www.beian.miit.gov.cn">陕ICP备20010010号-1</a>
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=61070202000390">沪公网备案61070202000390号</a>
+        </p>
         <ul class="footer__nav__list">
             <li>
                 <a class="link" href="" onclick="alert('别攻击就行')">使用条款</a>
