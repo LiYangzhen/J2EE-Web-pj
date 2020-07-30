@@ -41,6 +41,11 @@
                 %>
                 >
                 <%
+                if (request.getAttribute("content")!=null){
+                    out.println(request.getAttribute("content"));
+                }
+                %>
+                <%
                     if ("".equals(username)) {
                         out.print("<p style='color:red;text-align:left;'>You must enter Username.</p>");
                     }

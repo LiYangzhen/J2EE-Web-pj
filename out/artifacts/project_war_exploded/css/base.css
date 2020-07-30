@@ -668,6 +668,10 @@ header {
     background-image: url("../image/collections.png");
 }
 
+.dropdown-menu .friends {
+    background-image: url("../image/friend.png");
+}
+
 .dropdown-menu .logout {
     background-image: url("../image/logout.png");
 }

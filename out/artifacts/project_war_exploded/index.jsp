@@ -45,6 +45,7 @@
                 <li class="menu_item"><a href="upload" class="upload">上传图片</a></li>
                 <li class="menu_item"><a href="my_photos" class="my-pictures">我的图片</a></li>
                 <li class="menu_item"><a href="my_favourite.jsp" class="collections">我的收藏</a></li>
+                <li class="menu_item"><a href="friends.jsp" class="friends">我的好友</a></li>
                 <li class="menu_item"><a href="login?logout=true" class="logout">退出登录</a></li>
             </ul>
         </div>
